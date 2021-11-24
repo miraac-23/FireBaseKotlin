@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HesapAyarlariActivity">
+
+    <Button
+        android:id="@+id/btnDegisiklikleriKaydet"
+        android:layout_width="115dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="8dp"
+        android:text="Değişiklikleri Kaydet"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnSifreveyaMailGuncelle" />
+
+    <TextView
+        android:id="@+id/tvKullaniciName2"
+        android:layout_width="130dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="45dp"
+        android:text="Şuanki Şifre : "
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@+id/tvKullaniciName"
+        app:layout_constraintTop_toBottomOf="@+id/tvKullaniciName" />
+
+    <TextView
+        android:id="@+id/tvKullaniciName"
+        android:layout_width="127dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="40dp"
+        android:text="Kulalnıcı Adı :"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etHesapAyarlariKullaniciAdi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:ems="10"
+        android:hint="Kullanıcı Adı"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/etHesapAyarlariSifre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:ems="10"
+        android:hint="Parola"
+        android:inputType="textPassword"
+        app:layout_constraintStart_toStartOf="@+id/etHesapAyarlariKullaniciAdi"
+        app:layout_constraintTop_toBottomOf="@+id/etHesapAyarlariKullaniciAdi" />
+
+    <Button
+        android:id="@+id/btnSifreGonder"
+        android:layout_width="75dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="Şifre Sıfırla"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnSifreveyaMailGuncelle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnSifreveyaMailGuncelle" />
+
+    <Button
+        android:id="@+id/btnSifreveyaMailGuncelle"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="40dp"
+        android:text="Mail-Sifre Güncelle"
+        android:textSize="10sp"
+        app:layout_constraintEnd_toStartOf="@+id/btnDegisiklikleriKaydet"
+        app:layout_constraintTop_toBottomOf="@+id/etHesapAyarlariSifre" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/guncelleLayout"
+        android:layout_width="409dp"
+        android:layout_height="359dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnSifreveyaMailGuncelle">
+
+        <TextView
+            android:id="@+id/tvHesapAyarlariYeniEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="27dp"
+            android:layout_marginTop="16dp"
+            android:text="Yeni E-mail"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/etHesapAyarlariMailGuncelleme" />
+
+        <TextView
+            android:id="@+id/tvHesapAyarlariYeniSifre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:text="Yeni Şifre"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/tvHesapAyarlariYeniEmail"
+            app:layout_constraintTop_toBottomOf="@+id/tvHesapAyarlariYeniEmail" />
+
+        <EditText
+            android:id="@+id/etHesapAyarlariMailGuncelleme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="45dp"
+            android:ems="10"
+            android:inputType="textEmailAddress"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/etHesapAyarlariSifreGuncelleme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:ems="10"
+            android:inputType="textPassword"
+            app:layout_constraintEnd_toEndOf="@+id/etHesapAyarlariMailGuncelleme"
+            app:layout_constraintStart_toStartOf="@+id/etHesapAyarlariMailGuncelleme"
+            app:layout_constraintTop_toBottomOf="@+id/etHesapAyarlariMailGuncelleme" />
+
+        <Button
+            android:id="@+id/btnHesapAyarlariSifreyiGuncelle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="Şifreyi Güncelle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.561"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/etHesapAyarlariSifreGuncelleme" />
+
+        <Button
+            android:id="@+id/btnHesapAyarlariMailiGuncelle"
+            android:layout_width="173dp"
+            android:layout_height="47dp"
+            android:layout_marginTop="4dp"
+            android:text="Maili  Güncelle"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.563"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnHesapAyarlariSifreyiGuncelle" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
